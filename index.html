@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>CompSci</title>
+<script>
+function myFunction(){
+    let inputs = [];
+    let len = parseInt(document.getElementById("lenNum").value);
+    let temp;
+    let temp2;
+    temp = document.createElement("p");
+    temp2 = document.getElementById("text1");
+    temp.innerText = "Fill in the list.";
+    temp2.parentNode.replaceChild(temp, temp2);
+    temp = document.createElement("button");
+    temp2 = document.getElementById("lenNum");
+    temp.innerText = "Calculate List";
+    temp.setAttribute("onClick", "listFunction()")
+    temp.setAttribute("id", "listButton")
+    temp2.parentNode.replaceChild(temp, temp2);
+    temp = document.getElementById("lenButton");
+    temp.remove();
+    for(var i = 0; i < len; i++){
+        temp = document.createElement("input")
+        inputs.push(temp);
+    }
+    for(var i = 0; i < inputs.length; i++){
+        temp = document.createElement("p6");
+        temp.innerText = (i+1)+":";
+        document.body.appendChild(temp);
+        inputs[i].innerText = "";
+        inputs[i].setAttribute("type", "number")
+        inputs[i].setAttribute("id", "box"+i)
+        document.body.appendChild(inputs[i]);
+        document.body.appendChild(document.createElement("br"));
+    }
+    console.log(inputs);
+}
+</script>
+<script>
+function listFunction(){
+    console.log("hi")
+}
+</script>
+</head>
+<body>
+<button onClick="window.location.reload();">Restart</button>
+<p id="text1">Select how many values to create</p>
+
+<input type="number" id="lenNum"><br>
+<button onclick="myFunction()" id="lenButton">Hi</button><br>
+</body>
+</html>
