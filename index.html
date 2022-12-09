@@ -1,55 +1,97 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Hello World</title>
-<script>
-function myFunction(){
-    let inputs = [];
-    let len = parseInt(document.getElementById("lenNum").value);
-    let temp;
-    let temp2;
-    temp = document.createElement("p");
-    temp2 = document.getElementById("text1");
-    temp.innerText = "Fill in the list.";
-    temp2.parentNode.replaceChild(temp, temp2);
-    temp = document.createElement("button");
-    temp2 = document.getElementById("lenNum");
-    temp.innerText = "Calculate List";
-    temp.setAttribute("onClick", "listFunction()")
-    temp.setAttribute("id", "listButton")
-    temp2.parentNode.replaceChild(temp, temp2);
-    temp = document.getElementById("lenButton");
-    temp.remove();
-    for(var i = 0; i < len; i++){
-        temp = document.createElement("input")
-        inputs.push(temp);
+    <title>CompSci</title>
+    <script>let inputs = [];let temp;let temp2;</script>
+    <script>
+    function myFunction(){
+        let len = parseInt(document.getElementById("lenNum").value);
+        console.log(len);
+        if(len <= 0 || isNaN(len)){
+            console.log("invalid");
+            return
+        }
+        temp = document.createElement("p");
+        temp2 = document.getElementById("text1");
+        temp.innerText = "Fill in the list.";
+        temp.setAttribute("id", "text2")
+        temp2.parentNode.replaceChild(temp, temp2);
+
+        temp = document.createElement("button");
+        temp2 = document.getElementById("lenNum");
+        temp.innerText = "Calculate List";
+        temp.setAttribute("onClick", "listFunction()")
+        temp.setAttribute("id", "listButton")
+        temp2.parentNode.replaceChild(temp, temp2);
+
+        temp = document.getElementById("lenButton");
+        temp.remove();
+
+        for(var i = 0; i < len; i++){
+            temp = document.createElement("input")
+            inputs.push(temp);
+        }
+        for(var i = 0; i < inputs.length; i++){
+            temp = document.createElement("p6");
+            temp.innerText = (i+1)+":";
+            document.body.appendChild(temp);
+            inputs[i].innerText = "";
+            inputs[i].setAttribute("type", "number")
+            inputs[i].setAttribute("id", "box"+i)
+            document.body.appendChild(inputs[i]);
+            document.body.appendChild(document.createElement("br"));
+        }
+        
     }
-    for(var i = 0; i < inputs.length; i++){
+    </script>
+    <script>
+    function listFunction(){
+        let values = [];
+        let avg;
+        let total = 0;
+        for(var i = 0; i < inputs.length; i++){
+            temp = parseInt(document.getElementById(inputs[i].id).value);
+            if(isNaN(temp)){
+                console.log("invalid list element");
+                return  
+            }
+            values.push(temp);
+        }
+
+        console.log(values);
+
+        for(var i = 0; i < inputs.length; i++){
+            temp = document.createElement("p6");
+            temp2 = document.getElementById(inputs[i].id);
+            temp.innerText = " " + values[i];
+            temp2.parentNode.replaceChild(temp, temp2);
+        }
+        for(var i = 0; i < values.length; i++){
+            total+=values[i]
+        }
+        avg = total/values.length;
+        console.log(avg);
+
         temp = document.createElement("p6");
-        temp.innerText = (i+1)+":";
-        document.body.appendChild(temp);
-        inputs[i].innerText = "";
-        inputs[i].setAttribute("type", "number")
-        inputs[i].setAttribute("id", "box"+i)
-        document.body.appendChild(inputs[i]);
-        document.body.appendChild(document.createElement("br"));
+        temp2 = document.getElementById("listButton");
+        temp.innerText = "Average: " + avg;
+        temp2.parentNode.replaceChild(temp, temp2);
+
+        temp = document.createElement("p");
+        temp2 = document.getElementById("text2");
+        temp.innerText = "Average Calculated";
+        temp2.parentNode.replaceChild(temp, temp2);
+
     }
-    console.log(inputs);
-}
-</script>
-<script>
-function listFunction(){
-    console.log("hi")
-}
-</script>
+    </script>
 </head>
 <body>
 <button onClick="window.location.reload();">Restart</button>
-<p id="text1">Select how many values to create</p>
+<p id="text1">Select how many values to create.</p>
 
 <input type="number" id="lenNum"><br>
-<button onclick="myFunction()" id="lenButton">Hi</button><br>
+<button onclick="myFunction()" id="lenButton">Generate</button><br>
 </body>
 </html>
