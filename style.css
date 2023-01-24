@@ -3,11 +3,12 @@
 background-color: lightblue;
 }
 div.listContainer {
-  text-align: center;
-  background-color: green;
-  display: inline-block;
+  background-color: blue;
 }
 ul.centerUL {
-  display: inline-block;
-  text-align: left;
+  background-color: green;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
 }
