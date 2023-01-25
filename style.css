@@ -1,14 +1,30 @@
-﻿body
-{  
-background-color: lightblue;
+body.main{
+	 background-color: #8ba3ab;
+	 margin-top: 0px;
+	 margin-bottom: 0px;
 }
 div.listContainer {
-  background-color: blue;
+	background-color: #ffffff00;
+}
+center {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 20px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 ul.centerUL {
-  background-color: green;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 8em
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: green;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	width: 8em;
+	border-style: solid;
+	border-color: lightblue;
+	transition: transform 1600ms ease;
+}
+ul.centerUL:hover {
+	transform:matrix(0.93,-0.36,0.36,0.93,50,-50);
+	transition-duration: 1600ms;
 }
