@@ -9,7 +9,7 @@ div.listContainer {
 center {
 	margin-top: 0px;
 	margin-bottom: 0px;
-	font-size: 20px;
+	font-size: 30px;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 ul.centerUL {
@@ -30,5 +30,5 @@ ul.centerUL:hover {
 }
 li {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	font-size: 10px;
+	font-size: 18px;
 }
