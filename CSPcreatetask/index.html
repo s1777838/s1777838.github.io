@@ -21,6 +21,7 @@
         let raw = xhr.responseText;
         let lines = raw.split(/(?:\r\n|\n)+/).filter(function(el) {return el.length != 0});
         let headers = lines.splice(0, 1)[0].split(",");
+        let valuesRegExp = /(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g;
         let elements = [];
         for (let i = 0; i < lines.length; i++) {
             let element = {};
