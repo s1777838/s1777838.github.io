@@ -14,13 +14,19 @@
         <br />
         <input type="submit" value="Submit" />
     </form>
-    <script src=
-        "https://d3js.org/d3.v4.min.js">
-    </script>
-  
     <script>
-        d3.csv("biostats.csv", (d) => {
-            console.log(d)
-        })
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'biostats.csv', false);
+        xhr.onload = function() {
+          if (this.status == 0) {
+              const resp = this.response;
+              console.log(resp);
+          } else {
+              console.log("fail");
+        }};
+        console.log(xhr)
+        xhr.send();
+        console.log(xhr);
+        
     </script>
 </html>
