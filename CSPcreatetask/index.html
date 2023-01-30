@@ -17,16 +17,7 @@
     <script>
         const xhr = new XMLHttpRequest();
         xhr.open('GET', 'biostats.csv', false);
-        xhr.onload = function() {
-          if (this.status == 0) {
-              const resp = this.response;
-              console.log(resp);
-          } else {
-              console.log("fail");
-        }};
-        console.log(xhr)
         xhr.send();
-        console.log(xhr);
-        
+        console.log(xhr.responseText);
     </script>
 </html>
