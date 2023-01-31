@@ -19,7 +19,7 @@
         const xhr = new XMLHttpRequest();
         xhr.open('GET', 'biostats.csv', false);
         xhr.send();
-        console.log(csvTpArray(xhr.responseText));
+        console.log(csvToArray(xhr.responseText));
         function csvToArray(str, delimiter = ",") {
 
           // slice from start of text to the first \n index
