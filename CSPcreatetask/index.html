@@ -17,7 +17,7 @@
     </form>
     <script>
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'biostats.csv', false);
+        xhr.open('GET', 'PSCompPars_2023.02.02_22.22.21.csv', false);
         xhr.send();
         console.log(csvToArray(xhr.responseText));
         function csvToArray(str, delimiter = ",") {
