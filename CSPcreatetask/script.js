@@ -2,7 +2,7 @@
         const xhr = new XMLHttpRequest();
         xhr.open('GET', 'PSCompPars_2023.02.02_22.22.21.csv', false);
         xhr.send();
-        let exoplanetObjectArrays = csvToArray(xhr.responseText);
+        let exoplanetObjects = csvToArray(xhr.responseText);
         function csvToArray(str, delimiter = ",") {
           const headers = str.slice(0, str.indexOf("\n")).split(delimiter);
           const rows = str.slice(str.indexOf("\n") + 1).split("\n");
