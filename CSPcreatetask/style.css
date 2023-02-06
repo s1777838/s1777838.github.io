@@ -2,16 +2,13 @@ body{
 	 background-color: black;
 	 margin-top: 0px;
 	 margin-bottom: 0px;
-   color: white;
-}
-div{
-	background-color: gray;
+	color: white;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 center.title {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	font-size: 30px;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 button {
   border: none;
@@ -30,12 +27,14 @@ button.centerButton{
 	border: 2px solid #4CAF50;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	background-color: green;
-	margin-left: auto;
-	margin-right: auto;
-	width: 8em;
+	background-color: gray;
 }
 button.centerButton:hover {
   background-color: #4CAF50;
   color: white;
+}
+div {
+	margin-left: auto;
+	margin-right: auto;
+	width: 8em;
 }
