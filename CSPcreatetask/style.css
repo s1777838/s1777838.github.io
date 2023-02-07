@@ -11,27 +11,27 @@ center.title {
 	font-size: 30px;
 }
 button {
-  border: none;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
+	border: none;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
 }
 button.centerButton{
 	background-color: white;
 	color: black;
-	border: 2px solid #4CAF50;
+	border: 2px solid darkslateblue;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	background-color: gray;
 }
 button.centerButton:hover {
-  background-color: #4CAF50;
-  color: white;
+	background-color: darkslateblue;
+	color: white;
 }
 div {
 	margin-left: auto;
