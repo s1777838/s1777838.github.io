@@ -23,29 +23,34 @@ button {
 }
 button.centerButton{
 	background-color: white;
-	color: black;
+	color: lightgray;
 	border: 2px solid darkslateblue;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	background-color: gray;
+	background-color: navy;
 }
 button.centerButton:hover {
 	background-color: darkslateblue;
 	color: white;
 }
 img{
-	width: 25%;
-	height: 25%;
+	width: 30%;
+	height: 30%;
 	margin-top: 0px;
 	margin-bottom: 0px;
+	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 div {
+	margin-top: 0px;
+	margin-bottom: 0px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 8em;
 }
 footer {
+	margin-top: 0px;
+	margin-bottom: 0px;
 	text-align: center;
 }
