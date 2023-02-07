@@ -38,9 +38,13 @@ img{
 	margin-bottom: 0px;
 	margin-left: auto;
 	margin-right: auto;
+	scale: 25%;
 }
 div {
 	margin-left: auto;
 	margin-right: auto;
 	width: 8em;
+}
+footer {
+	text-align: center;
 }
