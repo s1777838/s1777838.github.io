@@ -6,16 +6,13 @@ body{
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 center.title {
-	margin-top: 0px;
-	margin-bottom: 0px;
 	font-size: 30px;
 }
 button {
-	border: none;
-	padding: 16px 32px;
+	padding: 8px 8px;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
+	display: block;
 	font-size: 16px;
 	margin: 4px 2px;
 	transition-duration: 0.4s;
@@ -24,33 +21,25 @@ button {
 button.centerButton{
 	background-color: white;
 	color: lightgray;
-	border: 2px solid darkslateblue;
-	margin-top: 0px;
-	margin-bottom: 0px;
+	border: 5px solid darkslateblue;
 	background-color: navy;
+	margin-left: auto;
+	margin-right: auto;
+	width: 8em;
 }
 button.centerButton:hover {
 	background-color: darkslateblue;
+	transform:matrix(1.01,0.00,0.00,1.01,0,0);
 	color: white;
 }
 img{
 	width: 30%;
 	height: 30%;
-	margin-top: 0px;
-	margin-bottom: 0px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
-div {
-	margin-top: 0px;
-	margin-bottom: 0px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 8em;
-}
 footer {
-	margin-top: 0px;
-	margin-bottom: 0px;
 	text-align: center;
+	font-size: 10px;
 }
