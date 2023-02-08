@@ -20,6 +20,10 @@
                 var exoplanetObject = exoplanetObjects[Math.floor(Math.random()*exoplanetObjects.length)];
                 console.log(exoplanetObject);
                 console.log(exoplanetObject.pl_name);
+                const newDiv = document.createElement("div");
+                newDiv.appendChild(document.createTextNode(exoplanetObject.pl_name);
+                newDiv.setAttribute("class", "planetDiv");
+                newDiv.setAttribute("id", "planetDiv");
                 const outputDiv = document.getElementById("outputDiv");
-                outputDiv.appendChild(document.createTextNode(exoplanetObject.pl_name));
+                outputDiv.appendChild(newDiv);
         }
