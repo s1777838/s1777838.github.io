@@ -20,6 +20,7 @@
                 var exoplanetObject = exoplanetObjects[Math.floor(Math.random()*exoplanetObjects.length)];
                 console.log(exoplanetObject);
                 console.log(exoplanetObject.pl_name);
+                console.log(findNeighbors(exoplanetObject));
                 const newDiv = document.createElement("div");
                 newDiv.appendChild(document.createTextNode("Planet Name: "+exoplanetObject.pl_name));
                 newDiv.appendChild(document.createElement("br"));
@@ -28,4 +29,13 @@
                 newDiv.setAttribute("id", "planetDiv");
                 const outputsDiv = document.getElementById("outputsDiv");
                 outputsDiv.appendChild(newDiv);
+        }
+        function findNeighbors(exoplanet){
+                temp = [];
+                for(var i=0;i<exoplanetObjects.length; i++){
+                        if(exoplanetObjects[i].hostname==exoplanet.hostname){
+                                temp.push(exoplanetObjects[i]);
+                        }
+                }
+                return temp;
         }
