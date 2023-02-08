@@ -14,12 +14,10 @@ button {
 	text-decoration: none;
 	display: block;
 	font-size: 16px;
-	margin: 4px 2px;
 	transition-duration: 0.4s;
 	cursor: pointer;
 }
 button.centerButton{
-	background-color: white;
 	color: lightgray;
 	border: 5px solid darkslateblue;
 	background-color: navy;
@@ -42,4 +40,18 @@ img{
 footer {
 	text-align: center;
 	font-size: 10px;
+}
+div.outputsDiv {
+	text-align: center;
+	display: block;
+	width: 15em;
+	margin-left: auto;
+	margin-right: auto;
+}
+div.outputDiv {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: white;
+	border: 5px solid darkslateblue;
+	background-color: dimgray;
 }
