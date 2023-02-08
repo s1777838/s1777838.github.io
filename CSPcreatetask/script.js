@@ -21,7 +21,9 @@
                 console.log(exoplanetObject);
                 console.log(exoplanetObject.pl_name);
                 const newDiv = document.createElement("div");
-                newDiv.appendChild(document.createTextNode(exoplanetObject.pl_name+"\nHello"));
+                newDiv.appendChild(document.createTextNode("Planet Name"+exoplanetObject.pl_name));
+                newDiv.appendChild(document.createElement("div"));
+                newDiv.appendChild(document.createTextNode("Discovery Method" + exoplanetObject.discoverymethod));
                 newDiv.setAttribute("class", "outputDiv");
                 newDiv.setAttribute("id", "planetDiv");
                 const outputsDiv = document.getElementById("outputsDiv");
