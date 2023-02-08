@@ -25,5 +25,5 @@
                 newDiv.setAttribute("class", "outputDiv");
                 newDiv.setAttribute("id", "planetDiv");
                 const outputsDiv = document.getElementById("outputsDiv");
-                outputDiv.appendChild(newDiv);
+                outputsDiv.appendChild(newDiv);
         }
