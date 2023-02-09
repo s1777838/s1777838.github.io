@@ -18,21 +18,15 @@
         }
         function randomExoplanet(){
                 let dist = parseInt(document.getElementById("distNum").value);
-                console.log(dist)
                 dist = dist*0.306601;
                 if(dist < 1.3 || isNaN(dist)){
                     console.log("invalid");
                     return
                 }
-                console.log(dist)
                 var exoplanetObject = exoplanetObjects[Math.floor(Math.random()*exoplanetObjects.length)];
                 while(parseFloat(exoplanetObject.sy_dist)>dist||isNaN(parseFloat(exoplanetObject.sy_dist))){
-                        console.log(exoplanetObject.sy_dist);
                         exoplanetObject = exoplanetObjects[Math.floor(Math.random()*exoplanetObjects.length)];
                 }
-                console.log(exoplanetObject);
-                console.log(exoplanetObject.pl_name);
-                console.log(exoplanetObject.sy_dist);
                 const outputsDiv = document.getElementById("outputsDiv");
                 outputsDiv.innerHTML = "";
                 for (var i=0;i<findNeighbors(exoplanetObject).length; i++){
