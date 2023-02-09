@@ -18,13 +18,16 @@
         }
         function randomExoplanet(){
                 let dist = parseInt(document.getElementById("distNum").value);
-                if(dist <= 10 || isNaN(dist)||dist>5000){
+                console.log(dist)
+                dist = dist*0.306601;
+                if(dist < 1.3 || isNaN(dist)){
                     console.log("invalid");
                     return
                 }
-                dist = dist*0.306601;
+                console.log(dist)
                 var exoplanetObject = exoplanetObjects[Math.floor(Math.random()*exoplanetObjects.length)];
-                while(exoplanetObject.sy_dist>dist){
+                while(exoplanetObject.sy_dist>dist||exoplanetObject.sy_dist.isNaN()){
+                        console.log(exoplanetObject.sy_dist);
                         exoplanetObject = exoplanetObjects[Math.floor(Math.random()*exoplanetObjects.length)];
                 }
                 console.log(exoplanetObject);
