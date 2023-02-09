@@ -21,6 +21,7 @@
                 console.log(exoplanetObject);
                 console.log(exoplanetObject.pl_name);
                 const outputsDiv = document.getElementById("outputsDiv");
+                outputsDiv.innerHTML = "";
                 for (var i=0;i<findNeighbors(exoplanetObject).length; i++){
                         let newDiv = generateDiv(findNeighbors(exoplanetObject)[i],i);
                         outputsDiv.appendChild(newDiv);
