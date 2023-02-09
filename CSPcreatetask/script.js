@@ -31,7 +31,7 @@
                 const tempDiv = document.createElement("div");
                 tempDiv.appendChild(document.createTextNode("Planet Name: "+exoplanet.pl_name));
                 tempDiv.appendChild(document.createElement("br"));
-                tempDiv.appendChild(document.createTextNode("Discovered " + exoplanet.disc_year + " at " +exoplanet.disc_facility " using " + exoplanet.discoverymethod));
+                tempDiv.appendChild(document.createTextNode("Discovered " + exoplanet.disc_year + " at " +exoplanet.disc_facility+ " using " + exoplanet.discoverymethod));
                 tempDiv.appendChild(document.createElement("br"));
                 tempDiv.appendChild(document.createTextNode(exoplanet.pl_rade + "times the radius of the Earth"));
                 tempDiv.appendChild(document.createElement("br"));
