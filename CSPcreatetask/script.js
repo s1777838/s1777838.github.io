@@ -17,9 +17,19 @@
           return arr;
         }
         function randomExoplanet(){
+                let dist = parseInt(document.getElementById("distNum").value);
+                if(dist <= 10 || isNaN(dist)||dist>5000){
+                    console.log("invalid");
+                    return
+                }
+                dist = dist*0.306601;
                 var exoplanetObject = exoplanetObjects[Math.floor(Math.random()*exoplanetObjects.length)];
+                while(exoplanetObject.sy_dist>dist){
+                        exoplanetObject = exoplanetObjects[Math.floor(Math.random()*exoplanetObjects.length)];
+                }
                 console.log(exoplanetObject);
                 console.log(exoplanetObject.pl_name);
+                console.log(exoplanetObject.sy_dist);
                 const outputsDiv = document.getElementById("outputsDiv");
                 outputsDiv.innerHTML = "";
                 for (var i=0;i<findNeighbors(exoplanetObject).length; i++){
@@ -31,11 +41,11 @@
                 const tempDiv = document.createElement("div");
                 tempDiv.appendChild(document.createTextNode("Planet Name: "+exoplanet.pl_name));
                 tempDiv.appendChild(document.createElement("br"));
-                tempDiv.appendChild(document.createTextNode("Discovered " + exoplanet.disc_year + " at " +exoplanet.disc_facility+ " using " + exoplanet.discoverymethod));
+                tempDiv.appendChild(document.createTextNode(exoplanet.pl_name+" was discovered in "+exoplanet.disc_year+" at "+exoplanet.disc_facility+" using the "+exoplanet.discoverymethod+" method"));
                 tempDiv.appendChild(document.createElement("br"));
-                tempDiv.appendChild(document.createTextNode(exoplanet.pl_rade + "times the radius of the Earth"));
+                tempDiv.appendChild(document.createTextNode("The radius of "+exoplanet.pl_name+" is "+exoplanet.pl_rade+" times the radius of the Earth"));
                 tempDiv.appendChild(document.createElement("br"));
-                tempDiv.appendChild(document.createTextNode((parseFloat(exoplanet.sy_dist)*3.26156).toString()+"light years away."));
+                tempDiv.appendChild(document.createTextNode(exoplanet.pl_name+" is "+(Math.round(((parseFloat(exoplanet.sy_dist)*3.26156) + Number.EPSILON) * 100) / 100).toString()+" light years away from our solar system."));
                 tempDiv.setAttribute("class", "outputDiv");
                 tempDiv.setAttribute("id", "planet"+index+"Div");
                 return tempDiv
