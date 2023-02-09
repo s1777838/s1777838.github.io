@@ -28,9 +28,9 @@
         }
         function generateDiv(exoplanet,index){
                 const tempDiv = document.createElement("div");
-                tempDiv.appendChild(document.createTextNode("Planet Name: "+exoplanetObject.pl_name));
+                tempDiv.appendChild(document.createTextNode("Planet Name: "+exoplanet.pl_name));
                 tempDiv.appendChild(document.createElement("br"));
-                tempDiv.appendChild(document.createTextNode("Discovery Method: " + exoplanetObject.discoverymethod));
+                tempDiv.appendChild(document.createTextNode("Discovery Method: " + exoplanet.discoverymethod));
                 tempDiv.setAttribute("class", "outputDiv");
                 tempDiv.setAttribute("id", "planet"+index+"Div");
                 return tempDiv
