@@ -26,7 +26,7 @@
                 }
                 console.log(dist)
                 var exoplanetObject = exoplanetObjects[Math.floor(Math.random()*exoplanetObjects.length)];
-                while(parseFloat(exoplanetObject.sy_dist)>dist||parseFloat(exoplanetObject.sy_dist)).isNaN()){
+                while(parseFloat(exoplanetObject.sy_dist)>dist||(parseFloat(exoplanetObject.sy_dist)).isNaN()){
                         console.log(exoplanetObject.sy_dist);
                         exoplanetObject = exoplanetObjects[Math.floor(Math.random()*exoplanetObjects.length)];
                 }
