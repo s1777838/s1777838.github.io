@@ -55,3 +55,12 @@ div.outputDiv {
 	border: 5px solid darkslateblue;
 	background-color: dimgray;
 }
+span {
+	display: block;
+	text-align: center;
+}
+input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
