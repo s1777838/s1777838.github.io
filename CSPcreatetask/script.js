@@ -2,16 +2,15 @@
         const xhr = new XMLHttpRequest();
         xhr.open('GET', 'PSCompPars_2023.02.02_22.22.21.csv', false);
         xhr.send();
-        let exoplanetObjects = csvToArray(xhr.responseText);
-        function csvToArray(csvRaw) {
-                let rows = csvRaw.split("\n").splice(0);
-                let columns = csvRaw.split("\n")[0].split(",");
-                console.log(columns);
+        let exoplanetObjects = arrayFromCSV(xhr.responseText);
+        function arrayFromCSV(csvRaw) {
                 let temp = [];
-                for(var i = 0; i<columns.length; i++){
-                        temp.push(new Exoplanet('testFirstNameOne', 'testLastNameOne'));
+                let columns = csvRaw.split("\n")[0].split(",");
+                let rows = csvRaw.split("\n").splice(0);
+                for(var i = 0; rows.length; i++){
+                        temp.push(new Exoplanet(columns, rows[i].split(","));
                 }
-                return "";
+                return temp;
         }
         function Exoplanet(columnDefinitions,columnValues){
                 for(var i = 0; i<columnDefinitons.length; i++){
