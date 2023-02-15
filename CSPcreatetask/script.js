@@ -1,6 +1,6 @@
 
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'PSCompPars_2023.02.02_22.22.21.csv', false);
+        xhr.open('GET', 'PSCompPars_2023.02.14_21.31.11.csv', false);
         xhr.send();
         let exoplanetObjects = arrayFromCSV(xhr.responseText);
         function arrayFromCSV(csvRaw) {
