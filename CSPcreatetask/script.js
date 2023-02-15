@@ -10,7 +10,7 @@
                 rows.splice(rows.length-1,1);
                 console.log(rows);
                 for(var i = 0; rows.length; i++){
-                        console.log(i+": "+row[i])
+                        console.log(i+": "+rows[i])
                         temp.push(new Exoplanet(columns, rows[i].split(",")));
                 }
                 return temp;
