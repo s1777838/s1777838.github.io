@@ -14,7 +14,7 @@
         }
         function Exoplanet(columnDefinitions,columnValues){
                 for(var i = 0; i<columnDefinitions.length; i++){
-                        window["this."+columnDefinitons[i]] = columnValues[i];
+                        window["this."+columnDefinitions[i]] = columnValues[i];
                 }
         }
 
