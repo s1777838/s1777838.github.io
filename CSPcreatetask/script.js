@@ -9,7 +9,7 @@
                 let rows = csvRaw.split("\n").splice(1);
                 rows.splice(rows.length-1,1);
                 console.log(rows);
-                for(var i = 0; rows.length; i++){
+                for(var i = 0; rows.length-1; i++){
                         console.log(i+": "+rows[i])
                         temp.push(new Exoplanet(columns, rows[i].split(",")));
                 }
