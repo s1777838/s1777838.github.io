@@ -13,7 +13,7 @@
                 return temp;
         }
         function Exoplanet(columnDefinitions,columnValues){
-                for(var i = 0; i<columnDefinitons.length; i++){
+                for(var i = 0; i<columnDefinitions.length; i++){
                         this.columnDefinitons[i] = columnValues[i];
                 }
         }
