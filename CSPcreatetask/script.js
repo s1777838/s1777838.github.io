@@ -1,6 +1,6 @@
 
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'PSCompPars_2023.02.02_22.22.21.csv', false);
+        xhr.open('GET', 'https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,hostname,sy_dist,disc_year,disc_facility,discoverymethod,pl_rade+from+pscomppars+order+by+pl_name+asc&format=csv', false);
         xhr.send();
         let exoplanetObjects = arrayFromCSV(xhr.responseText);
         function arrayFromCSV(csvRaw) {
