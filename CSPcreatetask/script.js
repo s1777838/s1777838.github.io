@@ -8,7 +8,7 @@
                 let columns = csvRaw.split("\n")[0].split(",");
                 let rows = csvRaw.split("\n").splice(1);
                 for(var i = 0; rows.length; i++){
-                        if(rows[i].split(",")===""){
+                        if(rows[i]===""){
                                 temp.push(new Exoplanet(columns, rows[i].split(",")));
                         }
                 }
