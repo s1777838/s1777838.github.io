@@ -6,7 +6,7 @@
         function arrayFromCSV(csvRaw) {
                 let temp = [];
                 let columns = csvRaw.split("\n")[0].split(",");
-                let rows = csvRaw.split("\n").splice(0);
+                let rows = csvRaw.split("\n").splice(1);
                 for(var i = 0; rows.length; i++){
                         temp.push(new Exoplanet(columns, rows[i].split(",")));
                 }
