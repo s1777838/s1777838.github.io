@@ -6,11 +6,9 @@
         function arrayFromCSV(csvRaw) {
                 let temp = [];
                 let columns = csvRaw.split("\n")[0].split(",");
-                let rows = csvRaw.split("\n").splice(1);
+                let rows = csvRaw.split("\n").splice(1).pop();
                 for(var i = 0; rows.length; i++){
-                        if(rows[i]===""){
-                                temp.push(new Exoplanet(columns, rows[i].split(",")));
-                        }
+                        temp.push(new Exoplanet(columns, rows[i].split(",")));
                 }
                 return temp;
         }
