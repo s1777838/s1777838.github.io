@@ -1,6 +1,6 @@
 
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,hostname,sy_dist,disc_year,disc_facility,discoverymethod,pl_rade+from+pscomppars+order+by+pl_name+asc&format=csv', false);
+        xhr.open('GET', 'PSCompPars_2023.02.02_22.22.21.csv', false);
         xhr.send();
         let exoplanetObjects = arrayFromCSV(xhr.responseText);
         function arrayFromCSV(csvRaw) {
@@ -42,11 +42,18 @@
                 const tempDiv = document.createElement("div");
                 tempDiv.appendChild(document.createTextNode("Planet Name: "+exoplanet.pl_name));
                 tempDiv.appendChild(document.createElement("br"));
-                tempDiv.appendChild(document.createTextNode(exoplanet.pl_name+" was discovered in "+exoplanet.disc_year+" at "+exoplanet.disc_facility+" using the "+exoplanet.discoverymethod+" method"));
+                tempDiv.appendChild(document.createTextNode(exoplanet.pl_name+
+                                                            " was discovered in "+exoplanet.disc_year+
+                                                            " at "+exoplanet.disc_facility+
+                                                            " using the "+exoplanet.discoverymethod+" method"));
                 tempDiv.appendChild(document.createElement("br"));
-                tempDiv.appendChild(document.createTextNode("The radius of "+exoplanet.pl_name+" is "+exoplanet.pl_rade+" times the radius of the Earth"));
+                tempDiv.appendChild(document.createTextNode("The radius of "+exoplanet.pl_name+
+                                                            " is "+exoplanet.pl_rade+" times the radius of the Earth"));
                 tempDiv.appendChild(document.createElement("br"));
-                tempDiv.appendChild(document.createTextNode(exoplanet.pl_name+" is "+(Math.round(((parseFloat(exoplanet.sy_dist)*3.26156) + Number.EPSILON) * 100) / 100).toString()+" light years away from our solar system."));
+                tempDiv.appendChild(document.createTextNode(exoplanet.pl_name+" is "+
+                                                            (Math.round(
+                                                            ((parseFloat(exoplanet.sy_dist)*3.26156) + Number.EPSILON) * 100
+                                                            )/ 100).toString()+" light years away from our solar system."));
                 tempDiv.setAttribute("class", "outputDiv");
                 tempDiv.setAttribute("id", "planet"+index+"Div");
                 return tempDiv
