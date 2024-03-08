@@ -218,7 +218,7 @@ High Pointer: 10
     Its logarithmic time complexity and straightforward implementation make it a staple in various applications, particularly in scenarios where quick and efficient searching is paramount.
     Understanding the principles of Binary Search provides a valuable foundation for algorithmic thinking and problem-solving in the world of computer science.
   </p>
-<textarea rows="30" cols="60">// Listen for messages from the main thread
+<textarea id="codeInputArea" rows="30" cols="60">// Listen for messages from the main thread
 self.onmessage = function(event) {
   // Perform some computation or drawing
   const imageData = drawSomething();
@@ -241,6 +241,9 @@ function drawSomething() {
 
   return imageData;
 }
-</textarea>	
+</textarea>
+<button onclick="runUserCode();">Click me!</button>
+<canvas id="outputCanvas" width="400" height="200"></canvas>
+<script src="main.js"></script>
 </body>
 </html>
