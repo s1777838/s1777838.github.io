@@ -11,7 +11,7 @@ function runUserCode() {
         // Pass data to the worker
         // worker.postMessage(data);
 
-        const canvas = document.getElementById('myCanvas');
+        const canvas = document.getElementById('outputCanvas');
         const ctx = canvas.getContext('2d');
 
         // Listen for messages from the Web Worker
