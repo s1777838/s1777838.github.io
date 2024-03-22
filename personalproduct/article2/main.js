@@ -4,9 +4,19 @@ function createUserCodeBlob(userCode) {
 }
 function addBoilerPlate(userCode) {
         boilerplate = `
+self.onmessage = function(event) {
+arr = [];
+for(let i = 0; i < 2000; i++) {
+        arr.push(2000*Math.random());
+}
+const start = Date.now();
 
+await console.log(sort(arr));
+const end = Date.now();
+self.postMessage(`Execution time: ${end - start} m`);
+};
         `;
-        return boilerplate+userCode
+        return boilerplate+userCode;
 }        
 function runUserCode() {
         let textArea = document.getElementById('codeInputArea');
@@ -19,7 +29,8 @@ function runUserCode() {
 
         const canvas = document.getElementById('outputCanvas');
         const ctx = canvas.getContext('2d');
-
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        context.fillStyle = "#ffffff"
         // Listen for messages from the Web Worker
         worker.onmessage = function(event) {
                 // Handle the message from the worker
