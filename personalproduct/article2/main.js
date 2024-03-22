@@ -11,7 +11,7 @@ for(let i = 0; i < 2000; i++) {
 }
 const start = Date.now();
 
-await console.log(sort(arr));
+console.log(sort(arr));
 const end = Date.now();
 time = end - start;
 self.postMessage(/"Execution Time: /"+time);
@@ -31,7 +31,7 @@ function runUserCode() {
         const canvas = document.getElementById('outputCanvas');
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        context.fillStyle = "#ffffff"
+        ctx.fillStyle = "#ffffff"
         // Listen for messages from the Web Worker
         worker.onmessage = function(event) {
                 // Handle the message from the worker
