@@ -6,15 +6,15 @@ function addBoilerPlate(userCode) {
         boilerplate = `
 self.onmessage = function(event) {
 arr = [];
-for(let i = 0; i < 2000; i++) {
-        arr.push(2000*Math.random());
+for(let i = 0; i < 10000; i++) {
+        arr.push(10000*Math.random());
 }
 const start = Date.now();
 
 console.log(sort(arr));
 const end = Date.now();
 time = end - start;
-self.postMessage(/"Execution Time: /"+time);
+self.postMessage(time);
 };
         `;
         return boilerplate+userCode;
