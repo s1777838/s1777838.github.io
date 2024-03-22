@@ -257,28 +257,25 @@ function merge(left, right) {
   	return [...sortedArr, ...left, ...right]
 }
 </pre>
-<textarea id="codeInputArea" rows="30" cols="60">// Listen for messages from the main thread
-self.onmessage = function(event) {
-  // Perform some computation or drawing
-  const imageData = drawSomething();
-
-  // Send the result back to the main thread
-  self.postMessage(imageData);
-};
-
-function drawSomething() {
-  // Create an image data object for the canvas
-  const imageData = new ImageData(400, 200);
-
-  // Set pixel values (for simplicity, set all pixels to red)
-  for (let i = 0; i < imageData.data.length; i += 4) {
-    imageData.data[i] = 255;   // Red
-    imageData.data[i + 1] = 0; // Green
-    imageData.data[i + 2] = 0; // Blue
-    imageData.data[i + 3] = 255; // Alpha (fully opaque)
-  }
-
-  return imageData;
+<textarea id="codeInputArea" rows="30" cols="60">
+function sort(arr) {
+	if (arr.length <= 1) return arr
+	let mid = Math.floor(arr.length / 2)
+	// Recursive calls
+	let left = mergeSort(arr.slice(0, mid))
+  	let right = mergeSort(arr.slice(mid))
+  	return merge(left, right)
+}
+function merge(left, right) {
+	let sortedArr = [];
+	while (left.length && right.length) {
+		if (left[0] < right[0]) {
+			sortedArr.push(left.shift());
+    		} else {
+      			sortedArr.push(right.shift());
+    		}
+  	}
+  	return [...sortedArr, ...left, ...right]
 }
 </textarea>
 <button onclick="runUserCode();">Click me!</button>
