@@ -28,6 +28,8 @@
 }
 body {
 	margin: 0px;
+	background-color: #333;
+	color: white;
 }
 .titlebackground {
   background-image: url('circuitboard.jpg');
@@ -81,3 +83,11 @@ body {
 .articlelist a {
   text-decoration:none;
 }
+footer {
+	text-align: center;
+	font-size: 14px;
+}
+footer a {
+  text-decoration:none;
+}
+
