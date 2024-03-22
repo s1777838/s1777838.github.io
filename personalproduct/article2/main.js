@@ -13,7 +13,8 @@ const start = Date.now();
 
 await console.log(sort(arr));
 const end = Date.now();
-self.postMessage(`Execution time: ${end - start} m`);
+time = end - start;
+self.postMessage(/"Execution Time: /"+time);
 };
         `;
         return boilerplate+userCode;
