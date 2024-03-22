@@ -6,8 +6,8 @@ function addBoilerPlate(userCode) {
         boilerplate = `
 self.onmessage = function(event) {
 arr = [];
-for(let i = 0; i < 10000; i++) {
-        arr.push(10000*Math.random());
+for(let i = 0; i < 30000; i++) {
+        arr.push(30000*Math.random());
 }
 const start = Date.now();
 
